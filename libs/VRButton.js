@@ -100,20 +100,25 @@ class VRButton {
         button.style.display = '';
         button.style.position = 'absolute'; // Position absolute to control position
         button.style.left = '50%'; // Center horizontally
-        button.style.top = '80%'; // Center vertically
+        button.style.top = '50%'; // Center vertically
         button.style.transform = 'translate(-50%, -50%)'; // Center the button precisely
         button.style.width = '120px'; // Increase width of the button
         button.style.height = '120px'; // Increase height of the button
         button.style.cursor = 'pointer';
         button.innerHTML = '<i class="fas fa-vr-cardboard"></i>';
         button.style.animation = 'bounce 2s infinite'; // Apply the 'bounce' animation with a duration of 2s and infinite looping
+        button.style.background = 'orange'; // Change background color to orange
 
         button.onmouseenter = function () {
             button.textContent = 'ENTER VR';
+            button.style.fontSize = '10px'; // Reduce text size
+            button.style.background = 'darkorange'; // Change background color on hover
         };
 
         button.onmouseleave = function () {
             button.innerHTML = '<i class="fas fa-vr-cardboard"></i>';
+            button.style.fontSize = ''; // Reset font size
+            button.style.background = 'orange'; // Reset background color
         };
 
         button.onclick = function () {
